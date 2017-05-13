@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+</head>
+<body>
+  <div class="login-page">
+  <div class="form">
+    <p style="color:red" id="message">{{message}}</p>
+    <form name="loginForm" class="login-form">
+    <input type="text" ng-model="username" placeholder="username" required/>
+    <input type="password" ng-model="password" placeholder="password" required/>
+    <button type="submit" ng-click="Login()" >Login</button>
+    <p class="message">Not registered? <a href="/register">Sign Up</a></p>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

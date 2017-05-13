@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <!-- load Angular into our HTML Page -->
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src='./../bower_components/jquery/dist/jquery.min.js'></script>
+    <link rel="stylesheet" href="./../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./../bower_components/bootstrap/dist/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+    <script src="/public/app/app.js" type="text/javascript"></script>
+        <script src="/public/Services/loginService.js" type="text/javascript"></script>
+    <script src="/public/Services/userService.js" type="text/javascript"></script>
+    <script src="/public/Controllers/loginController.js" type="text/javascript"></script>
+    <script src="/public/Controllers/historyController.js" type="text/javascript"></script>
+    <script src="/public/Controllers/registerController.js" type="text/javascript"></script>
+    <script src="/public/Controllers/mainController.js" type="text/javascript"></script>
+
+    <base href="/" />
+  </head>
+  <body ng-app="yourApp">
+<!--   <ul class="nav navbar-nav navbar-right">
+        <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="/contact"><i class="fa fa-comment"></i> Contact</a></li>
+      </ul> -->
+    <div ng-view></div>
+  </body>
+</html>

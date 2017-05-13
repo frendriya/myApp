@@ -1,0 +1,26 @@
+{
+  "constUser": [
+    {
+      "username": "",
+      "password": "",
+      "email": "",
+      "lastLoginTime": ""
+    }
+  ],
+  "Harish": [
+    {
+      "username": "Harish",
+      "password": "1234",
+      "email": "h@a",
+      "lastLoginTime": 1494680607
+    }
+  ],
+  "Mamta": [
+    {
+      "username": "Mamta",
+      "password": "123",
+      "email": "mamta.g@gmail.com",
+      "lastLoginTime": 1494615519
+    }
+  ]
+}

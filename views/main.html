@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Main Page</title>
+</head>
+<body style="background-color:hsla(290,60%,70%,0.3)">
+<div class="row">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Main</a></li>
+      <li><a href="#" ng-click="navHistory()">History</a></li>
+    </ul>
+            <ul class="nav navbar-nav navbar-right">
+       <li><a href="#" ng-click="logOut()"><span class="glyphicon glyphicon-log-out"></span>  Logout</a></li>
+    </ul>
+  </div>
+</nav>
+ <div class="col-sm-1">
+ <br>
+ <br>
+ </div>
+ <div class="col-sm-6">
+ <br>
+ <br>
+ <form ng-show="show">
+      <label style="float:left;width: 20%;text-align:center">Result:</label>
+      <input type="text" value="{{lastResult}}" disabled style="float:left;width: 15%;background-color:{{resultColor}}">
+      <br>
+      <br>
+      <label style="float:left;width: 20%;text-align:center">Number:</label>
+      <input type="text" value="{{newData}}"  disabled style="float:left;width: 15%" autocomplete="off" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false"> 
+      <br>
+      <br>
+      <label style="float:left;width: 20%;text-align:center">Your Input:</label>
+      <input type="text" ng-model="userInput" style="float:left;width: 15%" autofocus autocomplete="off" onpaste="return false;" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" required>
+      <br>
+      <br>
+      <input type="Submit" value="Submit" ng-click="Verify_number()" style="float:left;width: 15%;text-align:center" >
+      <input type="button" value="View Result" ng-hide = "showResultTable" ng-click="showTable(true)" style="float:left;width: 20%;text-align:center" >
+      <input type="button" value="Hide Result" ng-show = "showResultTable" ng-click="showTable(false)" style="float:left;width: 20%;text-align:center" >
+      </form>
+           <br>
+      <br>
+      <br>
+        <table id="resultTable" ng-show = "showResultTable" class="table table-sm table-inverse" style="width: 50%">
+        <thead>
+          <tr style="background-color: #e6e600">
+            <th style= "border: 2px solid #003366;text-align: left;padding: 2px">Result</th>
+            <th style= "border: 2px solid #003366;text-align: center;padding: 2px">Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background-color: #b3d9ff">
+            <th style= "border: 2px solid #003366;text-align: left;padding: 2px">Total Attempts</td>
+            <td style= "border: 2px solid #003366;text-align: center;padding: 2px">{{totalAttempts}}</td>
+          </tr>
+          <tr style="background-color: #00cc00">
+            <th style= "border: 2px solid #003366;text-align: left;padding: 2px">Total Correct</td>
+            <td style= "border: 2px solid #003366;text-align: center;padding: 2px">{{totalCorrect}}</td>
+          </tr>
+          <tr style="background-color: #ff6699">
+            <th style= "border: 2px solid #003366;text-align: left;padding: 2px">Total Incorrect</td>
+            <td style= "border: 2px solid #003366;text-align: center;padding: 2px">{{totalIncorrect}}</td>
+          </tr>
+        </tbody>
+      </table>
+ </div>
+ <div class="col-sm-4">
+      <br>
+      <br>
+      <p id="demo" style="background-color: lightgrey;width: 300px;border: 1px solid green;text-align:left;font-size:54px">{{timer}}</p>
+       <p style="color:red" id="message">{{message}}</p>
+       <input type="button" value="Start" ng-click="start()" ng-show="showStartButton" style="float:left;width: 20%;text-align:center" >
+       <input type="button" value="Pause" ng-click="pause()" ng-show="showPauseButton" style="float:left;width: 20%;text-align:center" >
+       <input type="button" value="Resume" ng-click="startTimer()" ng-show="showResumeButton" style="float:left;width: 20%;text-align:center" >
+
+      <br>
+      <br>
+ </div>
+ <div class="col-sm-1">
+ 	<br>
+ </div>
+ 
+</div>
+</body>
+</html>
