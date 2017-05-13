@@ -56,7 +56,7 @@
   "13-5-2017-Harish": [
     {
       "username": "Harish",
-      "CountdownTimer": 0,
+      "CountdownTimer": 400000,
       "totalAttempts": 16,
       "totalCorrect": 9,
       "totalIncorrect": 7
